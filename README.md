@@ -49,6 +49,43 @@ procedures to back it up.
 
 ---
 
+## The NSAI certification marks
+
+They appear on `index.html` and `how-it-works.html`. Three things to settle
+before this is live:
+
+**Name the certificate holder.** Both pages currently read *"Certificates are
+held by [YOUR REGISTERED COMPANY NAME]"*. If the certificates are issued to
+Cyclone or 2Flow rather than to Pharmassist, the site has to say so plainly. An
+NSAI mark on a site for an entity that isn't the certified one is a misuse of
+the mark, and it's the kind of thing a pharmacist doing due diligence will
+check. Naming the group company is not a weakness — it reads as a bigger
+operation standing behind a newer brand.
+
+**Check the scope.** ISO 9001 is certified against a defined scope of
+activities. If the certified scope covers warehousing and general courier work
+but not pharmacy delivery, the copy claiming it covers "the way we handle, track
+and hand over your bags" is a stretch. Read the certificate.
+
+**Confirm you may use the marks this way.** NSAI sets conditions on how their
+mark is displayed. I've placed both unaltered, at their own aspect ratio, with
+no crops, tints or added borders, which is the conservative reading — but the
+conditions attached to your certificate are the authority, not me.
+
+### About the image files
+
+The originals were **CMYK JPEGs with a 544KB embedded print colour profile**
+each — a print format browsers handle inconsistently. I converted both to
+greyscale RGB PNGs and stripped the profile: 431KB became 23KB and 13.6KB.
+
+The 9001 original was only **200px wide**, against 831px for the 14001. I've
+upscaled it to match so the pair look consistent, but it is doing more work than
+the pixels really support and will be a touch softer on a high-resolution
+screen. Worth asking NSAI for the EPS or SVG version of both — then they're
+sharp at any size and a fraction of the weight again.
+
+---
+
 ## Turning on the two forms
 
 Both are wired but post nowhere until you fill in `config.js`:

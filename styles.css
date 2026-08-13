@@ -253,6 +253,15 @@ p{margin:0}
 .zone--edge{background:var(--paper)}
 .zone--edge .zone__key{color:var(--slate)}
 
+/* ---------- certification marks ---------- */
+.certs{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+.certs__copy p{margin-top:16px}
+.certs__marks{display:flex;gap:20px;justify-content:flex-end}
+/* the NSAI mark carries its own frame and white field, so it sits unaltered —
+   no borders, tints or crops added */
+.certs__marks img{height:228px;width:auto;flex:none}
+.certs__note{font-size:13.5px;color:var(--label);margin-top:18px}
+
 /* ---------- form ---------- */
 .form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .form__row{display:flex;flex-direction:column;gap:7px}
@@ -288,6 +297,8 @@ p{margin:0}
   .hero__watermark{right:-190px;width:420px;height:420px}
   .steps,.cards,.nots{grid-template-columns:1fr}
   .cards--2{grid-template-columns:1fr}
+  .certs{grid-template-columns:1fr;gap:34px}
+  .certs__marks{justify-content:flex-start}
   .foot__grid{grid-template-columns:1fr 1fr;gap:32px}
 }
 @media (max-width:680px){
