@@ -79,12 +79,14 @@ p{margin:0}
 }
 .nav__in{display:flex;align-items:center;gap:24px;height:70px}
 .nav__links{display:flex;gap:26px;margin-left:auto;align-items:center}
-.nav__links a{
+/* :not(.btn) matters — without it this rule outranks .btn--solid and the
+   Partner button ends up with grey text on dark green. */
+.nav__links a:not(.btn){
   font-size:15px;font-weight:500;color:var(--body);text-decoration:none;
   padding:4px 0;border-bottom:2px solid transparent;
 }
-.nav__links a:hover{color:var(--head)}
-.nav__links a[aria-current="page"]{color:var(--head);border-bottom-color:var(--green)}
+.nav__links a:not(.btn):hover{color:var(--head)}
+.nav__links a:not(.btn)[aria-current="page"]{color:var(--head);border-bottom-color:var(--green)}
 .nav__cta{margin-left:6px}
 .nav__toggle{display:none}
 
@@ -301,7 +303,9 @@ p{margin:0}
     border-radius:4px;padding:8px 13px;font-family:var(--sans);font-size:14px;
     font-weight:600;color:var(--head);cursor:pointer;
   }
-  .nav__cta{display:none}
+  /* the button used to be hidden on mobile, which left phone visitors with no
+     call to action at all — it now sits at the foot of the open menu */
+  .nav__cta{margin-left:0;align-self:stretch}
   .checker__field,.catch{flex-direction:column}
   .checker__go,.catch button{padding:14px 24px}
   .form{grid-template-columns:1fr}
