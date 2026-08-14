@@ -1,16 +1,16 @@
 /* ==========================================================================
-   PHARMASSIST — shared stylesheet
+   PHARMASSIST shared stylesheet
    Brand colours sampled from the logo:
      #2F8F1C  "Pharm" green      #1A9F4D  the cross      #708090  "assist" slate
    ========================================================================== */
 
 :root{
   --green:#2F8F1C;
-  --green-dk:#256F16;        /* readable on white — use for buttons and links */
+  --green-dk:#256F16;        /* readable on white: use for buttons and links */
   --green-dker:#1D5911;
   --cross:#1A9F4D;
   --slate:#708090;
-  --ink:#2A3742;             /* darkest — dark sections, headings */
+  --ink:#2A3742;             /* darkest: dark sections, headings */
   --head:#33414D;
   --body:#55646F;
   --label:#5E6D78;
@@ -79,7 +79,7 @@ p{margin:0}
 }
 .nav__in{display:flex;align-items:center;gap:24px;height:70px}
 .nav__links{display:flex;gap:26px;margin-left:auto;align-items:center}
-/* :not(.btn) matters — without it this rule outranks .btn--solid and the
+/* :not(.btn) matters. Without it this rule outranks .btn--solid and the
    Partner button ends up with grey text on dark green. */
 .nav__links a:not(.btn){
   font-size:15px;font-weight:500;color:var(--body);text-decoration:none;
@@ -91,16 +91,29 @@ p{margin:0}
 .nav__toggle{display:none}
 
 /* ---------- wordmark, set in type to match the logo ---------- */
-.mark{display:inline-flex;align-items:center;gap:7px;text-decoration:none;flex:none}
-.mark__word{font-size:23px;font-weight:600;letter-spacing:-.022em;line-height:1;white-space:nowrap}
+.mark{display:inline-flex;align-items:center;gap:8px;text-decoration:none;flex:none}
+/* all caps, per the logo. Tracking is slightly positive because uppercase needs
+   air where the old lowercase setting needed tightening. */
+.mark__word{
+  font-size:21px;font-weight:500;text-transform:uppercase;
+  letter-spacing:.012em;line-height:1;white-space:nowrap;
+}
 .mark__word .g{color:var(--green)}
 .mark__word .s{color:var(--slate)}
-.mark__cross{width:18px;height:18px;color:var(--cross);flex:none;margin-bottom:1px}
-.mark--lg .mark__word{font-size:30px}
-.mark--lg .mark__cross{width:23px;height:23px}
+.mark__cross{width:17px;height:17px;color:var(--cross);flex:none}
+.mark--lg .mark__word{font-size:28px}
+.mark--lg .mark__cross{width:22px;height:22px}
 .mark--light .mark__word .s{color:rgba(255,255,255,.72)}
 .mark--light .mark__word .g{color:#7CD466}
 .mark--light .mark__cross{color:#7CD466}
+
+/* the logo lockup carries its tagline in black; on the dark footer that
+   becomes a light tint of the same idea */
+.mark-tagline{
+  font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:#000;margin:10px 0 0;
+}
+.foot .mark-tagline{color:rgba(255,255,255,.5)}
 
 /* ---------- sections ---------- */
 .sec{padding:78px 0}
@@ -257,8 +270,8 @@ p{margin:0}
 .certs{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
 .certs__copy p{margin-top:16px}
 .certs__marks{display:flex;gap:20px;justify-content:flex-end}
-/* the NSAI mark carries its own frame and white field, so it sits unaltered —
-   no borders, tints or crops added */
+/* the NSAI mark carries its own frame and white field, so it sits unaltered.
+   No borders, tints or crops added */
 .certs__marks img{height:228px;width:auto;flex:none}
 .certs__note{font-size:13.5px;color:var(--label);margin-top:18px}
 
@@ -303,6 +316,10 @@ p{margin:0}
 }
 @media (max-width:680px){
   .sec{padding:56px 0}
+  /* all caps runs wider than the old lowercase setting, so ease it down
+     before it collides with the menu button */
+  .mark__word{font-size:19px}
+  .mark__cross{width:15px;height:15px}
   .nav__links{display:none}
   .nav__links.is-open{
     display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;
@@ -315,7 +332,7 @@ p{margin:0}
     font-weight:600;color:var(--head);cursor:pointer;
   }
   /* the button used to be hidden on mobile, which left phone visitors with no
-     call to action at all — it now sits at the foot of the open menu */
+     call to action at all. It now sits at the foot of the open menu */
   .nav__cta{margin-left:0;align-self:stretch}
   .checker__field,.catch{flex-direction:column}
   .checker__go,.catch button{padding:14px 24px}
