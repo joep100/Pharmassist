@@ -1,0 +1,68 @@
+{
+  "rewrites": [
+    {
+      "source": "/foleys",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/foodys",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/gear",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/remedi",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/susanhunter",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/healthwave",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/stockdesign",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/cyclonetest",
+      "destination": "/booking.html"
+    },
+    {
+      "source": "/hop/foleys",
+      "destination": "/booking-hop.html?p=foleys"
+    },
+    {
+      "source": "/hop/foodys",
+      "destination": "/booking-hop.html?p=foodys"
+    },
+    {
+      "source": "/hop/gear",
+      "destination": "/booking-hop.html?p=gear"
+    },
+    {
+      "source": "/hop/remedi",
+      "destination": "/booking-hop.html?p=remedi"
+    },
+    {
+      "source": "/hop/susanhunter",
+      "destination": "/booking-hop.html?p=susanhunter"
+    },
+    {
+      "source": "/hop/healthwave",
+      "destination": "/booking-hop.html?p=healthwave"
+    },
+    {
+      "source": "/hop/stockdesign",
+      "destination": "/booking-hop.html?p=stockdesign"
+    },
+    {
+      "source": "/hop/cyclonetest",
+      "destination": "/booking-hop.html?p=cyclonetest"
+    }
+  ]
+}
